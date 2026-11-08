@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem('conf_github', githubTag);
 
         const avatarFile = avatarInput.files[0];
-        if (avatarFile) {
+       if (avatarFile) {
             const reader = new FileReader();
             reader.onload = function(e) {
                 sessionStorage.setItem('conf_avatar', e.target.result);
@@ -93,9 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             window.location.href = 'ticket.html';
         }
-    } else {
-                window.location.href = 'ticket.html';
-            }
-        }
-    });
+    }
 });
+}); 
