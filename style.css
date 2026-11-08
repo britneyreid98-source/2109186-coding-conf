@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('pexels-akshar-dave-594233.jpg');
+    background-image: linear-gradient(rgba(16, 13, 32, 0.75), rgba(16, 13, 32, 0.75)), url('pexels-akshar-dave-594233.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
