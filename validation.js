@@ -93,7 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             window.location.href = 'ticket.html';
         }
-    }
-            reader.readAsDataURL(avatarFile);
+    } else {
+                window.location.href = 'ticket.html';
+            }
+        }
     });
 });
