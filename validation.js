@@ -73,20 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // If all checks pass, process file reader and store session data
         if (isValid) {
+        // Save text data immediately to sessionStorage
+        sessionStorage.setItem('conf_fullName', fullName);
+        sessionStorage.setItem('conf_email', email);
+        sessionStorage.setItem('conf_github', githubTag);
+
+        const avatarFile = avatarInput.files[0];
+        if (avatarFile) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                const avatarDataUrl = e.target.result;
-
-                // Save data to sessionStorage for the ticket page
-                sessionStorage.setItem('conf_fullName', fullName);
-                sessionStorage.setItem('conf_email', email);
-                sessionStorage.setItem('conf_github', githubTag);
-                sessionStorage.setItem('conf_avatar', avatarDataUrl);
-
-                // Redirect to the ticket confirmation page
+                sessionStorage.setItem('conf_avatar', e.target.result);
+                window.location.href = 'ticket.html';
+            };
+            reader.onerror = function() {
+                // Fallback if reader fails so it still redirects
                 window.location.href = 'ticket.html';
             };
             reader.readAsDataURL(avatarFile);
+        } else {
+            window.location.href = 'ticket.html';
         }
+    }
+            reader.readAsDataURL(avatarFile);
     });
 });
