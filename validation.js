@@ -1,11 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registrationForm');
     
-    if (!form) return;
-
-    form.addEventListener('submit', function(event) {
-        // Prevent default submission to perform custom validation
-        event.preventDefault();
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // <-- This stops the default browser URL reload!
+        });
+    }
+});
 
         // Grab form fields
         const fullNameInput = document.getElementById('fullName');
