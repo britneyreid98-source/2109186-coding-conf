@@ -539,3 +539,19 @@ p, span, li, a {
     color: #ffb8d0 !important;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9) !important;
 }
+
+.form-group label, 
+.ticket-container label,
+.form-intro p {
+    color: #f7f3ff !important;
+    font-weight: 600;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+.ticket-container {
+    background: rgba(25, 20, 45, 0.92) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
