@@ -18,9 +18,3 @@ HOW TO TEST
 6. Try opening HTML/ticket.html directly before registering. It should redirect to index.html.
 
 Note: This is a front-end class project. localStorage is browser storage, not a secure server or database.
-
-Before submission:
-- Replace the ZIP filename with the lecturer's required IDNo_LastName_FirstName_IA#2zip format.
-- Add your student details and required screenshots to the PDF report.
-- Add your real GitHub repository and free hosting links after publishing the project.
-- Test the pages at mobile and desktop widths and take your own screenshots.
