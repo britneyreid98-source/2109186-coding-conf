@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Conf 2026 | Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🚀 Coding Conf</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html" class="cta-nav">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="ticket-container">
+            <div class="ticket-header">
+                <h2>Conference Registration</h2>
+            </div>
+            
+            <!-- Registration Form -->
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Doe" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="user@domain.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="githubTag">GitHub User Tag</label>
+                    <input type="text" id="githubTag" name="githubTag" placeholder="@username" required>
+                    <span class="error-message" id="githubError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="avatarUpload">Avatar Graphic Upload (JPEG/PNG, max 500KB)</label>
+                    <input type="file" id="avatarUpload" name="avatarUpload" accept="image/png, image/jpeg" required>
+                    <span class="error-message" id="avatarError"></span>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Generate Ticket</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Coding Conf. All rights reserved.</p>
+    </footer>
+
+    <!-- Form Validation Script -->
+    <script src="js/validation.js"></script>
+</body>
+</html>

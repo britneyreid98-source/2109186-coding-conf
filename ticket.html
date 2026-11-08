@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Conf 2026 | Your Ticket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🚀 Coding Conf</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="cta-nav">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="ticket-container">
+            <div class="success-banner">
+                <h2 id="successMessage">Congrats, Attendee! Your ticket is ready.</h2>
+            </div>
+
+            <!-- Glassmorphism Ticket Card -->
+            <div class="ticket-card" style="margin-top: 2rem;">
+                <div class="ticket-header">
+                    <span class="logo">🚀 Coding Conf</span>
+                    <span class="serial-tracker">#1999</span>
+                </div>
+
+                <div class="ticket-body">
+                    <img id="ticketAvatar" src="" alt="Attendee Avatar" class="avatar-preview">
+                    <div class="ticket-info" style="text-align: left;">
+                        <h3 id="ticketName" style="margin-bottom: 0.3rem;">Full Name</h3>
+                        <p id="ticketEmail" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"></p>
+                        <p id="ticketGithub" style="color: var(--accent-purple); font-weight: 600; margin-bottom: 0.8rem;"></p>
+                        <div class="event-metadata" style="display: inline-block; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                            📅 Oct 26, 2026 | 📍 Papine, Kgn
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Coding Conf. All rights reserved.</p>
+    </footer>
+
+    <!-- Ticket Dynamic Rendering & Security Boundary Script -->
+    <script src="js/ticket.js"></script>
+</body>
+</html>
