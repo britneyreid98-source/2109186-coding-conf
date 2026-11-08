@@ -18,17 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const avatarError = document.getElementById('avatarError');
 
             // Reset previous error messages
-            nameError.textContent = '';
-            emailError.textContent = '';
-            githubError.textContent = '';
-            avatarError.textContent = '';
+            if (nameError) nameError.textContent = '';
+            if (emailError) emailError.textContent = '';
+            if (githubError) githubError.textContent = '';
+            if (avatarError) avatarError.textContent = '';
 
             let isValid = true;
 
             // 1. Full Name Validation
             const fullName = fullNameInput.value.trim();
             if (!fullName) {
-                nameError.textContent = 'Full name is required.';
+                if (nameError) nameError.textContent = 'Full name is required.';
                 isValid = false;
             }
 
@@ -36,35 +36,35 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = emailInput.value.trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!email) {
-                emailError.textContent = 'Email address is required.';
+                if (emailError) emailError.textContent = 'Email address is required.';
                 isValid = false;
             } else if (!emailRegex.test(email)) {
-                emailError.textContent = 'Please enter a valid email address (e.g. user@domain.com).';
+                if (emailError) emailError.textContent = 'Please enter a valid email address (e.g. user@domain.com).';
                 isValid = false;
             }
 
             // 3. GitHub Tag Validation
             const githubTag = githubInput.value.trim();
             if (!githubTag) {
-                githubError.textContent = 'GitHub user tag is required.';
+                if (githubError) githubError.textContent = 'GitHub user tag is required.';
                 isValid = false;
             } else if (!githubTag.startsWith('@')) {
-                githubError.textContent = 'GitHub tag must begin with the @ prefix (e.g. @username).';
+                if (githubError) githubError.textContent = 'GitHub tag must begin with the @ prefix (e.g. @username).';
                 isValid = false;
             }
 
             // 4. Avatar Upload Validation
             const avatarFile = avatarInput.files[0];
             if (!avatarFile) {
-                avatarError.textContent = 'Please upload an avatar image.';
+                if (avatarError) avatarError.textContent = 'Please upload an avatar image.';
                 isValid = false;
             } else {
                 const validTypes = ['image/jpeg', 'image/png'];
                 if (!validTypes.includes(avatarFile.type)) {
-                    avatarError.textContent = 'Only JPEG or PNG image formats are allowed.';
+                    if (avatarError) avatarError.textContent = 'Only JPEG or PNG image formats are allowed.';
                     isValid = false;
                 } else if (avatarFile.size > 500 * 1024) {
-                    avatarError.textContent = 'Avatar file size must be under 500KB.';
+                    if (avatarError) avatarError.textContent = 'Avatar file size must be under 500KB.';
                     isValid = false;
                 }
             }
