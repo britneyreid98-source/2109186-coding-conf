@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // <-- This stops the default browser URL reload!
+            e.preventDefault(); // This stops the reload for the main validation block!
+            
+            // --- ALL YOUR VALIDATION CODE GOES HERE ---
+            const fullNameInput = document.getElementById('fullName');
+            // ... (rest of your validation and file reader code)
         });
     }
 });
