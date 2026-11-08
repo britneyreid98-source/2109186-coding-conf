@@ -149,6 +149,15 @@ p {
     background: rgba(255, 255, 255, 0.04);
 }
 
+p, span, li, a {
+    color: #f7f3ff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.eyebrow, .date-location {
+    color: #ffb8d0;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
 .content-section,
 .callout {
     width: min(1000px, 90%);
